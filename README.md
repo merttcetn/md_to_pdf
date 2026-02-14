@@ -1,16 +1,16 @@
-# md_to_pdf
+# md2pdf
 
 **Pixel-perfect Markdown → PDF.  
 Preview it in your browser, paginate in A4, then export exactly what you see.**
 
 Stop guessing how your PDF will look.  
-`md_to_pdf` opens a real paginated preview, lets you pick a template and font, and generates a **WYSIWYG** PDF with identical layout.
+`md2pdf` opens a real paginated preview, lets you pick a template and font, and generates a **WYSIWYG** PDF with identical layout.
 
 > **The missing WYSIWYG Markdown → PDF CLI.**
 
 ---
 
-## Why md_to_pdf?
+## Why md2pdf?
 
 Most Markdown → PDF tools:
 
@@ -20,7 +20,7 @@ Most Markdown → PDF tools:
 * don't support Mermaid/KaTeX properly
 * have no visual template selection
 
-**md_to_pdf fixes that.**
+**md2pdf fixes that.**
 
 👉 What you preview = what you export.
 
@@ -43,7 +43,7 @@ Most Markdown → PDF tools:
 ## One-liner
 
 ```bash
-md_to_pdf file.md
+md2pdf file.md
 ```
 
 Preview → choose style → export → done.
@@ -64,16 +64,16 @@ Preview → choose style → export → done.
 ### Via npm (from GitHub)
 
 ```bash
-npm install -g github:merttcetn/md_to_pdf
+npm install -g github:merttcetn/md2pdf
 ```
 
-This command installs dependencies, builds the project, and makes the `md_to_pdf` command available globally.
+This command installs dependencies, builds the project, and makes the `md2pdf` command available globally.
 
 ### Build from source
 
 ```bash
-git clone https://github.com/merttcetn/md_to_pdf.git
-cd md_to_pdf
+git clone https://github.com/merttcetn/md2pdf.git
+cd md2pdf
 npm install   # installs dependencies and builds automatically
 npm install -g .
 ```
@@ -97,13 +97,13 @@ bash installation.sh --no-global
 ### If installed via npm
 
 ```bash
-npm update -g md_to_pdf
+npm update -g md2pdf
 ```
 
 ### If installed from source
 
 ```bash
-cd md_to_pdf
+cd md2pdf
 git pull
 npm install
 npm install -g .
@@ -114,7 +114,7 @@ npm install -g .
 ## 🚀 Usage
 
 ```bash
-md_to_pdf file.md
+md2pdf file.md
 ```
 
 1. A preview opens in your browser.

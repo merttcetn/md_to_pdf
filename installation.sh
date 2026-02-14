@@ -36,8 +36,8 @@ npm test
 if [ "${1:-}" = "--no-global" ] || [ "${INSTALL_GLOBAL:-1}" = "0" ]; then
   log "Skipping global install (--no-global or INSTALL_GLOBAL=0)"
 else
-  log "Installing md_to_pdf globally"
+  log "Installing md2pdf globally"
   npm install -g .
 fi
 
-log "Done. Run: md_to_pdf examples/project-notes.md"
+log "Done. Run: md2pdf examples/project-notes.md"

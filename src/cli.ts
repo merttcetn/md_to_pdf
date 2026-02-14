@@ -43,7 +43,7 @@ async function openInBrowser(url: string): Promise<void> {
 
 async function main(): Promise<void> {
   if (!cliInputArg) {
-    console.error("Usage: md_to_pdf <input.md>");
+    console.error("Usage: md2pdf <input.md>");
     process.exit(1);
     return;
   }
@@ -248,7 +248,7 @@ async function main(): Promise<void> {
   const url = `http://127.0.0.1:${address.port}/`;
 
   console.log(`Opening preview: ${url}`);
-  console.log("Tip: If the tab closes accidentally, rerun md_to_pdf.");
+  console.log("Tip: If the tab closes accidentally, rerun md2pdf.");
 
   await openInBrowser(url);
 
