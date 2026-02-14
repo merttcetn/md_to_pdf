@@ -104,7 +104,3 @@ src/
     types.ts             # Shared type definitions
     templates.ts         # Template list
 ```
-
-## 📜 License
-
-MIT
