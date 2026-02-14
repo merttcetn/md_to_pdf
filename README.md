@@ -1,10 +1,10 @@
-# md_to_pdf
+# 📄 md_to_pdf
 
 A CLI tool that previews Markdown files in the browser and converts them to PDF.
 
 When you run it in the terminal, an A4-paginated preview opens in your browser. After selecting a template and font and clicking **OK**, a PDF is generated with the exact same appearance.
 
-## Features
+## ✨ Features
 
 - **4 templates** &mdash; Clean, Classic, Modern, Academic
 - **4 font options** &mdash; Jakarta Sans, Times New Roman, Figtree, or the template default
@@ -14,14 +14,14 @@ When you run it in the terminal, an A4-paginated preview opens in your browser. 
 - **Image support** &mdash; relative paths are resolved automatically
 - **Overwrite protection** &mdash; asks for confirmation if the output file already exists
 
-## Requirements
+## 📋 Requirements
 
 - **Node.js 20+**
 - **Chromium-based browser** (Chrome, Chromium, Edge, or Brave)
 
 > On macOS, default browser paths are scanned automatically. If your browser is in a different location, set the `CHROME_PATH` environment variable.
 
-## Installation
+## 📦 Installation
 
 ### Via npm (from GitHub)
 
@@ -52,7 +52,7 @@ If you do not want a global installation:
 bash installation.sh --no-global
 ```
 
-## Update
+## 🔄 Update
 
 ### If installed via npm
 
@@ -69,7 +69,7 @@ npm install
 npm install -g .
 ```
 
-## Usage
+## 🚀 Usage
 
 ```bash
 md_to_pdf file.md
@@ -80,7 +80,7 @@ md_to_pdf file.md
 3. Set the output PDF path.
 4. Click **OK** to generate the PDF, or **Cancel** to exit.
 
-## Development
+## 🛠️ Development
 
 ```bash
 npm install        # install dependencies + build
@@ -105,6 +105,6 @@ src/
     templates.ts         # Template list
 ```
 
-## License
+## 📜 License
 
 MIT
