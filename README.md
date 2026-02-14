@@ -1,18 +1,54 @@
-# 📄 md_to_pdf
+# md_to_pdf
 
-A CLI tool that previews Markdown files in the browser and converts them to PDF.
+**Pixel-perfect Markdown → PDF.  
+Preview it in your browser, paginate in A4, then export exactly what you see.**
 
-When you run it in the terminal, an A4-paginated preview opens in your browser. After selecting a template and font and clicking **OK**, a PDF is generated with the exact same appearance.
+Stop guessing how your PDF will look.  
+`md_to_pdf` opens a real paginated preview, lets you pick a template and font, and generates a **WYSIWYG** PDF with identical layout.
 
-## ✨ Features
+> **The missing WYSIWYG Markdown → PDF CLI.**
 
-- **4 templates** &mdash; Clean, Classic, Modern, Academic
-- **4 font options** &mdash; Jakarta Sans, Times New Roman, Figtree, or the template default
-- **KaTeX** math formulas
-- **Mermaid** diagrams
-- **Task list** support
-- **Image support** &mdash; relative paths are resolved automatically
-- **Overwrite protection** &mdash; asks for confirmation if the output file already exists
+---
+
+## Why md_to_pdf?
+
+Most Markdown → PDF tools:
+
+* render differently in the final PDF
+* break pagination
+* require complex Pandoc configs
+* don't support Mermaid/KaTeX properly
+* have no visual template selection
+
+**md_to_pdf fixes that.**
+
+👉 What you preview = what you export.
+
+---
+
+## Key Features
+
+* 🖥️ **Browser-based A4 preview** with real pagination
+* 🎨 **Template picker** — Clean · Classic · Modern · Academic
+* 🔤 **Font selection** — Jakarta Sans · Figtree · Times New Roman · Default
+* 📐 **KaTeX math** support
+* 🧩 **Mermaid diagrams**
+* ☑️ Task lists
+* 🖼️ Relative image auto-resolution
+* 🛡️ Overwrite protection
+* ⚡ One command CLI workflow
+
+---
+
+## One-liner
+
+```bash
+md_to_pdf file.md
+```
+
+Preview → choose style → export → done.
+
+---
 
 ## 📋 Requirements
 
@@ -20,6 +56,8 @@ When you run it in the terminal, an A4-paginated preview opens in your browser. 
 - **Chromium-based browser** (Chrome, Chromium, Edge, or Brave)
 
 > On macOS, default browser paths are scanned automatically. If your browser is in a different location, set the `CHROME_PATH` environment variable.
+
+---
 
 ## 📦 Installation
 
@@ -52,6 +90,8 @@ If you do not want a global installation:
 bash installation.sh --no-global
 ```
 
+---
+
 ## 🔄 Update
 
 ### If installed via npm
@@ -69,6 +109,8 @@ npm install
 npm install -g .
 ```
 
+---
+
 ## 🚀 Usage
 
 ```bash
@@ -79,6 +121,8 @@ md_to_pdf file.md
 2. Select a template and font.
 3. Set the output PDF path.
 4. Click **OK** to generate the PDF, or **Cancel** to exit.
+
+---
 
 ## 🛠️ Development
 
@@ -104,3 +148,5 @@ src/
     types.ts             # Shared type definitions
     templates.ts         # Template list
 ```
+
+---
