@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>md_to_pdf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/vendor/katex.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="appShell">
+      <aside class="sidebar no-print">
+        <header class="app-header">
+          <p class="eyebrow">Markdown to PDF</p>
+          <h1>Preview and Export</h1>
+          <p id="sourcePath" class="muted"></p>
+        </header>
+
+        <section class="controls">
+          <label class="field">
+            <span>Template</span>
+            <div id="templateSelect"></div>
+          </label>
+
+          <label class="field">
+            <span>Font</span>
+            <div id="fontSelect"></div>
+          </label>
+
+          <label class="field">
+            <span id="fontSizeLabel">Font Size (Template Default)</span>
+            <input id="fontSizeRange" type="range" min="12" max="24" step="1" value="0" />
+          </label>
+
+          <label class="field">
+            <span>Output PDF</span>
+            <div class="output-group">
+              <input id="outputPath" type="text" readonly />
+              <button id="choosePath" type="button">Choose Path</button>
+            </div>
+          </label>
+        </section>
+
+        <footer class="actions">
+          <p id="status" aria-live="polite"></p>
+          <div class="button-row">
+            <button id="cancelButton" type="button" class="secondary">Cancel</button>
+            <button id="okButton" type="button" class="primary">OK</button>
+          </div>
+        </footer>
+      </aside>
+
+      <main id="previewViewport">
+        <article id="previewPaper" class="template-clean">
+          <div id="previewPages"></div>
+          <div id="previewMeasure" aria-hidden="true">
+            <div id="previewContent" class="doc-flow"></div>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <div id="pathModal" class="modal-overlay" hidden>
+      <div class="modal">
+        <header class="modal__header">
+          <h2>Choose Output Path</h2>
+          <button id="modalClose" type="button" class="modal__close" aria-label="Close">&times;</button>
+        </header>
+        <div class="modal__breadcrumb" id="modalBreadcrumb"></div>
+        <div class="modal__list" id="modalList"></div>
+        <div class="modal__input-row">
+          <label class="modal__filename-label">
+            <span>File name</span>
+            <input id="modalFileName" type="text" placeholder="output.pdf" />
+          </label>
+        </div>
+        <footer class="modal__footer">
+          <button id="modalCancel" type="button" class="secondary">Cancel</button>
+          <button id="modalConfirm" type="button" class="primary">Select</button>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
